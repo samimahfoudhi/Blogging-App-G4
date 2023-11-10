@@ -1,13 +1,13 @@
 import React from 'react'
 import { nav } from "../../assets/datas/data"
 import logo from '../../assets/images/blog.svg'
-import './Headers.css'
+import './headers.css'
 
 import { Link } from 'react-router-dom'
-export const Headers = () => {
+export const Header = () => {
   return (
     <> 
-    <Headers >
+    <header >
        <div className="scontainer flex">
        <div className="logo">
        <img src={logo} alt="logo" width= "100px"/>
@@ -22,8 +22,9 @@ export const Headers = () => {
             </ul>
           </nav>
        </div>
-    </Headers>
+    </header>
    
     </>
   )
 }
+export default Header
