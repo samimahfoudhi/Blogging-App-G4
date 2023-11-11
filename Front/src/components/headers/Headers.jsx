@@ -1,7 +1,7 @@
 import React from "react"
 import logo from "../../assets/images/blog1.png"
 import "./headers.css"
-
+import { User } from "../User"
 import { nav } from "../../assets/datas/data"
 import { Link } from "react-router-dom"
 
@@ -27,7 +27,7 @@ export const Header = () => {
             </ul>
           </nav>
           <div className='account flexCenter'>
-          
+          <User />
           </div>
         </div>
       </header>
