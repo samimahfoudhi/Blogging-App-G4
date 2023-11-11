@@ -12,6 +12,10 @@ module.exports = (sequelize, Datatype) => {
       type: Datatype.STRING,
       allowNull: false,
     },
+    email: {
+      type: Datatype.STRING,
+      allowNull: false,
+    },
     age: {
       type: Datatype.INTEGER,
       allowNull: false,
@@ -22,10 +26,5 @@ module.exports = (sequelize, Datatype) => {
     },
   });
 
-  Profil.associate = (models) => {
-    Profil.belongsTo(models.User, {
-      onDelete: "cascade",
-    });
-  };
   return Profil;
 };

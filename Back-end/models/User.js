@@ -2,7 +2,7 @@ module.exports = (sequelize, Datatype) => {
   const User = sequelize.define("User", {
     email: {
       type: Datatype.STRING,
-      unique: true,
+
       allowNull: false,
     },
     password: {
@@ -13,9 +13,6 @@ module.exports = (sequelize, Datatype) => {
 
   User.associate = (models) => {
     User.hasMany(models.Blog, {
-      onDelete: "cascade",
-    });
-    User.hasOne(models.Profil, {
       onDelete: "cascade",
     });
   };
