@@ -1,20 +1,20 @@
 header {
-    background: #fff;
-    padding: 1px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
-    position: relative;
-    z-index: 44;
-  }
-  
-  nav ul {
-    display: flex;
-  }
-  nav a {
-    text-transform: capitalize;
-    margin-right: 30px;
-    color: #000;
-  }
-
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+  position: relative;
+  z-index: 44;
+}
+/* nav */
+nav ul {
+  display: flex;
+}
+nav a {
+  text-transform: capitalize;
+  margin-right: 30px;
+  color: #000;
+}
+/* User */
 .profile {
   margin-left: 30px;
   cursor: pointer;
@@ -81,5 +81,3 @@ header.active {
     display: none;
   }
 }
-
-  

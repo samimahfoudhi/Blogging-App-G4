@@ -1,18 +1,23 @@
-import React from 'react'
+import React from "react"
+import logo from "../../assets/images/blog1.png"
+import "./headers.css"
+
 import { nav } from "../../assets/datas/data"
-import logo from '../../assets/images/blog1.png'
-import './Headers.css'
-import { User } from '../User'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
+
 export const Header = () => {
+   window.addEventListener("scroll", function () {
+    const header = this.document.querySelector(".header")
+    header.classList.toggle("active", this.window.scrollY > 100)
+  }) 
   return (
-    <> 
-    <header >
-       <div className="scontainer flex">
-       <div className="logo">
-       <img src={logo} alt="logo" width= "100px"/>
-       </div>
-       <nav>
+    <>
+      <header className='header'>
+        <div className='scontainer flex'>
+          <div className='logo'>
+            <img src={logo} alt='logo' width='100px' />
+          </div>
+          <nav>
             <ul>
               {nav.map((link) => (
                 <li key={link.id}>
@@ -21,11 +26,11 @@ export const Header = () => {
               ))}
             </ul>
           </nav>
-          <div className='account flexcenter'> <User /> </div>
-       </div >
-    </header>
-   
+          <div className='account flexCenter'>
+          
+          </div>
+        </div>
+      </header>
     </>
   )
 }
-export default Header
