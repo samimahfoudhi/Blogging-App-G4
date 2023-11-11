@@ -1,8 +1,8 @@
 import React from 'react'
 import { nav } from "../../assets/datas/data"
-import logo from '../../assets/images/blog.svg'
+import logo from '../../assets/images/blog1.png'
 import './headers.css'
-
+import { User } from '../User'
 import { Link } from 'react-router-dom'
 export const Header = () => {
   return (
@@ -21,7 +21,8 @@ export const Header = () => {
               ))}
             </ul>
           </nav>
-       </div>
+          <div className='account flexcenter'> <User /> </div>
+       </div >
     </header>
    
     </>
