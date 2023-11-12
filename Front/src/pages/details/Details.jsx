@@ -37,7 +37,7 @@ export const Details = () => {
               </div>
               <h1>Betadine Feminine Wash</h1>
               <p>{blogs.desc}</p>
-              <p>""</p>
+              <p>"its correct"</p>
               <p>Author: </p>
             </div>
           </div>

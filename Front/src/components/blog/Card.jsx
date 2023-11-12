@@ -26,7 +26,7 @@ export const Card = () => {
                 <div className='date'>
                   <AiOutlineClockCircle className='icon' /> <label htmlFor=''>{item.date}</label>
                   <AiOutlineComment className='icon' /> <label htmlFor=''>0</label>
-                  <AiOutlineShareAlt className='icon' /> <label htmlFor=''>SHARE</label>
+                  
                 </div>
               </div>
             </div>

@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import { IoSettingsOutline } from "react-icons/io5"
-import { BsBagCheck } from "react-icons/bs"
-import { AiOutlineHeart } from "react-icons/ai"
-import { GrHelp } from "react-icons/gr"
+
 import { BiLogOut } from "react-icons/bi"
 import { RiImageAddLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
@@ -19,18 +17,18 @@ export const User = () => {
         {user ? (
           <>
             <button className='img' onClick={() => setProfileOpen(!profileOpen)}>
-              <img src='https://icons.veryicon.com/64/Movie%20%26%20TV/One%20Piece%20Manga%20Jolly%20Roger/Luffys%20flag.png' alt='' />
+              <img src='https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600' alt='' />
             </button>
             {profileOpen && (
               <div className='openProfile boxItems' onClick={close}>
                 <Link to='/account'>
                   <div className='image'>
                     <div className='img'>
-                      <img src='https://icons.veryicon.com/64/Movie%20%26%20TV/One%20Piece%20Manga%20Jolly%20Roger/Luffys%20flag.png' alt='' />
+                      <img src='https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600' alt='' />
                     </div>
                     <div className='text'>
                       <h4>Fahd Aroua</h4>
-                      <label>Bizerte,Tunisia</label>
+                      <label>Bizere,Tunisia</label>
                     </div>
                   </div>
                 </Link>
@@ -46,18 +44,7 @@ export const User = () => {
                     <h4>My Account</h4>
                   </button>
                 </Link>
-                <button className='box'>
-                  <BsBagCheck className='icon' />
-                  <h4>My Order</h4>
-                </button>
-                <button className='box'>
-                  <AiOutlineHeart className='icon' />
-                  <h4>Wishlist</h4>
-                </button>
-                <button className='box'>
-                  <GrHelp className='icon' />
-                  <h4>Help</h4>
-                </button>
+                
                 <button className='box'>
                   <BiLogOut className='icon' />
                   <h4>Log Out</h4>
