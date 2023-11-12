@@ -18,6 +18,8 @@ export const Register = () => {
           <form>
             <span>Email address *</span>
             <input type='text' required />
+            <span>UserName *</span>
+            <input type='text' required />
             <span>FirstName *</span>
             <input type='text' required />
             <span>LastName *</span>
