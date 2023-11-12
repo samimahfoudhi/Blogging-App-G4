@@ -35,7 +35,7 @@ route.post("/login", (req, res) => {
           if (!same) {
             res.status(400).json("wrong password");
           } else {
-            res.status(200).json("true");
+            res.status(200).json(true);
           }
         });
       }
