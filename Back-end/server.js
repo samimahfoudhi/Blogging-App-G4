@@ -1,3 +1,4 @@
+
 const express = require("express");
 const cors = require("cors");
 const db = require("./models");
@@ -18,3 +19,4 @@ db.sequelize.sync().then(() => {
     console.log(`listening on ${port}`);
   });
 });
+
