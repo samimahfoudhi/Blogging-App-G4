@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { IoSettingsOutline } from "react-icons/io5"
-
+import { BsBagCheck } from "react-icons/bs"
+import { AiOutlineHeart } from "react-icons/ai"
+import { GrHelp } from "react-icons/gr"
 import { BiLogOut } from "react-icons/bi"
 import { RiImageAddLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
@@ -27,8 +29,8 @@ export const User = () => {
                       <img src='https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600' alt='' />
                     </div>
                     <div className='text'>
-                      <h4>Fahd Aroua</h4>
-                      <label>Bizere,Tunisia</label>
+                      <h4></h4>
+                      <label></label>
                     </div>
                   </div>
                 </Link>
@@ -45,10 +47,7 @@ export const User = () => {
                   </button>
                 </Link>
                 
-                <button className='box'>
-                  <BiLogOut className='icon' />
-                  <h4>Log Out</h4>
-                </button>
+                
               </div>
             )}
           </>

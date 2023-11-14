@@ -7,6 +7,7 @@ route.post("/createprofil", (req, res) => {
     if (doc !== 0) {
       res.status(400).json("email already used !");
     }
+    else
     {
       db.Profil.create({
         firstname: req.body.firstname,
