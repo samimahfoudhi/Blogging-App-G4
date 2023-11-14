@@ -6,9 +6,9 @@ route.post("/createprofil", (req, res) => {
   db.Profil.count({ where: { email: req.body.email } }).then((doc) => {
     if (doc !== 0) {
       res.status(400).json("email already used !");
-    }
-    else
-    {
+
+    } else {
+
       db.Profil.create({
         firstname: req.body.firstname,
         lastname: req.body.lastname,
