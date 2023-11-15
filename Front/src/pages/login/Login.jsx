@@ -1,8 +1,14 @@
 import React from "react"
+
 import "./login.css"
 import back from "../../assets/images/my-account.jpg"
+import { useNavigate } from "react-router"
 
 export const Login = () => {
+const navigate=useNavigate()
+
+function handleClick() {
+  navigate('/')}
   return (
     <>
       <section className='login'>
@@ -20,7 +26,7 @@ export const Login = () => {
             <input type='text' required />
             <span>Password *</span>
             <input type='password' required />
-            <button className='button'>Log in</button>
+            <button  className='button'button onClick={handleClick} >Log in</button>
           </form>
         </div>
       </section>

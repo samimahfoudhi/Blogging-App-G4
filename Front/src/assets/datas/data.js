@@ -6,19 +6,15 @@ export const nav = [
     },
     {
       id: 2,
-      text: "about",
-      url: "/about",
+      text: "register",
+      url: "/register",
     },
     {
       id: 3,
-      text: "pages",
-      url: "/pages",
+      text: "Login",
+      url: "/login",
     },
-    {
-      id: 4,
-      text: "blog",
-      url: "/blog",
-    },
+    
     
   ]
   export const category = [

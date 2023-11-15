@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home/Home";
 import {Header } from "./components/headers/Headers"
 import { Details} from "./pages/details/Details.jsx";
@@ -10,20 +10,21 @@ import { Create } from "./components/create/Create.jsx";
 import { Footer } from "./components/footer/Footer"
 
 const App = () => {
+    
   return (
     <>
       <Router>
       <Header />
-        <Switch>
-          <Route exact path='/' component={Home} />
+        <Routes>
+          <Route exact path='/' element={<Home/>} />
           
-          <Route exact path='/details/:id' component={Details} />
-          <Route exact path='/account' component={Account} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/register' component={Register} />
-          <Route exact path='/create' component={Create} />
+          <Route exact path='/details/:id' element={<Details/>} />
+          <Route exact path='/account' element={<Account/>} />
+          <Route exact path='/login' element={<Login/>} />
+          <Route exact path='/register' element={<Register/>} />
+          <Route exact path='/create' element={<Create/>} />
         
-        </Switch>
+        </Routes>
         <Footer />
       </Router>
     </>

@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useState } from "react";
 import logo from "../../assets/images/blog1.png"
-import "./headers.css"
-import { User } from "../User"
+import "./Headers.css"
+
 import { nav } from "../../assets/datas/data"
 import { Link } from "react-router-dom"
+import { User } from "../User"
 
 export const Header = () => {
+ 
    window.addEventListener("scroll", function () {
     const header = this.document.querySelector(".header")
     header.classList.toggle("active", this.window.scrollY > 100)
@@ -27,7 +29,8 @@ export const Header = () => {
             </ul>
           </nav>
           <div className='account flexCenter'>
-          <User />
+          {<User />}
+
           </div>
         </div>
       </header>
