@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -15,9 +15,6 @@ h2 {
 }
 h3 {
   font-weight: 500;
-}
-a {
-  font-size: 17px;
 }
 ul,
 li,
@@ -53,6 +50,7 @@ label {
   color: #999;
   font-size: 13px;
 }
+select,
 form,
 .boxItems {
   border: 1px solid #e6e6e6;
@@ -73,6 +71,7 @@ form span {
 }
 form textarea,
 .accountInfo .right input,
+form select,
 form input {
   border: 1px solid #212121;
   border-radius: 6px;
@@ -84,6 +83,7 @@ form input {
   width: 100%;
   margin-bottom: 30px;
 }
+
 .button {
   background: #212121;
   border: 1px solid;
@@ -111,18 +111,20 @@ form input {
   margin: auto;
 }
 footer {
+  margin-top: 50px;
   padding: 10px;
 }
 footer .icon {
   font-size: 20px;
   margin-left: 10px;
 }
+.link {
+  margin-top: 20px;
+  color: blue;
+}
 @media screen and (max-width: 768px) {
   .grid3,
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-.link {
-  color: #000;
 }

@@ -1,14 +1,31 @@
-import React from "react"
-
+import React, { useContext, useRef } from "react"
 import "./login.css"
 import back from "../../assets/images/my-account.jpg"
-import { useNavigate } from "react-router"
+import { Link } from "react-router-dom"
+import { Context } from "../../context/Context"
+import axios from "axios"
 
 export const Login = () => {
-const navigate=useNavigate()
+  const userRef = useRef()
+  const passRef = useRef()
+  const { dispatch, FetchData } = useContext(Context)
 
-function handleClick() {
-  navigate('/')}
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    dispatch({ type: "LOGINSTART" })
+    try {
+      const res = await axios.post("/auth/login", {
+        username: userRef.current.value,
+        password: passRef.current.value,
+      })
+      dispatch({ type: "LOGINSUCC", payload: res.data })
+    } catch (error) {
+      dispatch({ type: "LOGINFAILED" })
+    }
+    window.location.replace("/")
+  }
+  //console.log(user)
+  console.log(FetchData)
   return (
     <>
       <section className='login'>
@@ -21,12 +38,18 @@ function handleClick() {
             </div>
           </div>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <span>Username or email address *</span>
-            <input type='text' required />
+            <input type='text' required ref={userRef} />
             <span>Password *</span>
-            <input type='password' required />
-            <button  className='button'button onClick={handleClick} >Log in</button>
+            <input type='password' required ref={passRef} />
+            <button className='button' type='submit' disabled={FetchData}>
+              Log in
+            </button>
+
+            <Link to='/register' className='link'>
+              Register
+            </Link>
           </form>
         </div>
       </section>
